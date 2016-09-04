@@ -3,7 +3,7 @@
 The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation.
 
 #Motivation
-A core principle of software design is Separation of Concerns (SOR). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
+Two cores principles of goodd software design is [Separation of Concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns) and [Single Responsibility Principle(https://en.wikipedia.org/wiki/Single_responsibility_principle). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
 
 A business rule engine allows the application to have a good Separation of Concerns (SOR). The Angular Rule Engine allows you to:
 
@@ -14,10 +14,146 @@ A business rule engine allows the application to have a good Separation of Conce
 + Use a consistent pattern and mechanism to implement your business rules and data validation.+ 
 
 ##ValidationContext
+The ValidationContext is the container object for rules. It allows the developer to add, execute and retrieve the results of the evaluated rules. 
+
++ Add rules by calling the [addRule()] function. 
++ Execute rules by calling the [renderRules()] function.
++ Retrieve the results (a list of RuleResult items) using the [results] public property.
+
+```js
+export class ValidatonContextBase implements IValidationContext {
+	state: ValidationContextState = ValidationContextState.NotEvaluated;
+	results: Array<RuleResult> = new Array<RuleResult>();
+  rules: Array<RulePolicy> = new Array<RulePolicy>();
+  source: string;
+
+	/**
+	 * Use this method to add a new rule to the ValidationContext. 
+	 */
+    addRule(rule: RulePolicy) {
+        if (this.source) {
+            rule.source = this.source;
+        }
+        this.rules.push(rule);
+		return this;
+	}
+
+  
+  /**
+   * Use this method to execute the rules added to the [ValidationContext].
+  */
+    renderRules(): ValidatonContextBase {
+		this.results = new Array<RuleResult>();
+		if (this.rules && this.rules.length < 1) {
+			return this;
+		}
+		this.rules.sort(r => r.priority).forEach(r => this.results.push(r.execute()));
+		return this;
+	}
+
+  /**
+   * Use to determin if the validation context has any rule violations.
+   */
+	hasRuleViolations(): boolean {
+		var hasViolations = false;
+		if (this.rules && this.rules.filter(r => r.isValid === false)) {
+			hasViolations = true;
+		}
+		return hasViolations;
+	}
+
+    /**
+     * *Use to indicate if the validation context is valid - no rule violations.
+     * @returns {}: returns a boolean.
+     */
+	get isValid(): boolean {
+		var isRuleValid: boolean = true;
+		if (this.rules) {
+			var invalidRulesCount = this.rules.filter(r => r.isValid === false).length;
+			if (invalidRulesCount > 0) {
+				isRuleValid = false;
+			}
+		}
+		return isRuleValid;
+	}
+}
+  
+```
+
 ##Adding Rules to the ValidationContext
+Using an initialzied [ValidationContext] object, you can add rules using a Fluent API syntax. The following example uses existing rules. 
+
+A rule requires:
++Name: the name of the rule.
++Message: the text to display if the rule fails.
+
+```js
+  this._validationContext
+      .withSource(this.actionName)
+      .addRule(new rules.AreEqual('ThingsAreEqual', 'The things are not equal.', 'this', 'that', false))
+      .addRule(new rules.IsTrue('ThisIsTrue', 'This is not true', this.isDone, true))
+      .addRule(new rules.IsTrue('Really?', 'Is it really true?', false))
+      .addRule(new rules.StringIsNotNullEmptyRange('StringIsGood', 'The string is not valid.', 'Hi', 3, 10));
+```
+
 ##Executing Rules
 ##Evaluation Rule Results
 ##RulePolicy
+The [RulePolicy] is the base class for all rule types. The angular-rules-engine contains (2) types of rule implmentations. Simple and Composite. These rule types form the basis of the rule engine. The rule engine uses the Composite Design Pattern.
+
++ isValid: 
++ message: 
++ name:
++ priority:
++ result: 
++ isDisplayable:
++ renderType: 
++ severity: 
++ source: 
+
+```js
+export class RulePolicy implements IRuleComponent {
+    isValid: boolean = true;
+    message: string;
+    name: string;
+    priority: number;
+    result: RuleResult;
+    isDisplayable: boolean;
+    renderType: RenderType = RenderType.EvaluateAllRules;
+    severity: Severity = Severity.Exception;
+    source: string;
+
+    constructor(name: string, message: string, isDisplayable: boolean);
+    constructor(name: string, message: string, isDisplayable: boolean = false, severity: Severity = Severity.Exception, priority: number = 0) {
+        this.name = name;
+        this.message = message;
+        this.isDisplayable = isDisplayable;
+        this.priority = priority;
+        this.severity = severity;
+    }
+
+    execute(): RuleResult {
+        console.log('Begin execution of RulePolicy: ' + this.name);
+        return this.render();
+    }
+
+    /**
+     * Each rule must implement this function and return a valid [RuleResult].
+     */
+    render(): RuleResult {
+        throw new Error('Each concreate rule must implement this function and return a valid Result.');
+    }
+}
+```
+##IRuleComponent
+asdf
+
+```js
+export interface IRuleComponent {
+    execute(): RuleResult;
+}
+```
+##RuleResult
 ##Simple Rules
 ##Composite Rules
 
