@@ -1,4 +1,4 @@
 /*angular-rules-engine*/
 exports.printMsg = function() {
-  console.log("Angular Rules Engine :: Build Something Amazing");
+  console.log("ng2RuleEng.build(somethingAmazing);");
 }
