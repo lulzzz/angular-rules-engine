@@ -2,6 +2,13 @@
 # Angular Rules Engine
 The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation.
 
+#Getting Started
+
+1. Initialize a new ValidationContext.
+2. Add rules to the context.
+3. Execute the rules.
+4. Evaluate the rule results.
+
 #Motivation
 Two cores principles of goodd software design is [Separation of Concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns) and [Single Responsibility Principle(https://en.wikipedia.org/wiki/Single_responsibility_principle). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
 
