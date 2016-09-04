@@ -1,4 +1,25 @@
-# AngularRulesEngine
+
+# Angular Rules Engine
+The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation.
+
+#Motivation
+A core principle of software design is Separation of Concerns (SOR). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
+
+A business rule engine allows the application to have a good Separation of Concerns (SOR). The Angular Rule Engine allows you to:
+
++ Use out-of-the-box rules that are already implemented.
++ Create custom rules that are either simple or composite.
++ Create rules that can be reused throughout the application. Code reuse eliminates copy/paste of common rules.
++ Use a single ValidationContext to add rules, execute rules, and evaluate the rule results. 
++ Use a consistent pattern and mechanism to implement your business rules and data validation.+ 
+
+##ValidationContext
+##Adding Rules to the ValidationContext
+##Executing Rules
+##Evaluation Rule Results
+##RulePolicy
+##Simple Rules
+##Composite Rules
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.10.
 
