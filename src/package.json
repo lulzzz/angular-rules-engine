@@ -1,6 +1,6 @@
 {
   "name": "angular-rules-engine",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications.",
   "main": "index.js",
   "scripts": {
@@ -36,6 +36,24 @@
   "_npmUser": {
     "name": "buildmotion",
     "email": "matt.vaughn@buildmotion.com"
+  },
+   "dependencies": {
+    "typescript-dotnet-commonjs": "3.2.4"
+  },
+  "devDependencies": {
+    "angular-cli": "1.0.0-beta.10",
+    "codelyzer": "0.0.20",
+    "ember-cli-inject-live-reload": "1.4.0",
+    "jasmine-core": "2.4.1",
+    "jasmine-spec-reporter": "2.5.0",
+    "karma": "0.13.22",
+    "karma-chrome-launcher": "0.2.3",
+    "karma-jasmine": "0.3.8",
+    "protractor": "3.3.0",
+    "ts-node": "0.5.5",
+    "tslint": "3.11.0",
+    "typescript": "1.8.10",
+    "typings": "1.3.1"
   },
   "dist": {
     "shasum": "0380024cc357f42b968901d4f90632637b4f14fb",
