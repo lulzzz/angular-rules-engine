@@ -1,6 +1,6 @@
 {
   "name": "angular-rules-engine",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications.",
   "main": "index.js",
   "scripts": {
@@ -37,7 +37,7 @@
     "name": "buildmotion",
     "email": "matt.vaughn@buildmotion.com"
   },
-   "dependencies": {
+  "dependencies": {
     "typescript-dotnet-commonjs": "3.2.4"
   },
   "devDependencies": {
