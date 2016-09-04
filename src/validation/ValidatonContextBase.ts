@@ -42,7 +42,7 @@ export class ValidatonContextBase implements IValidationContext {
 	}
 
     /**
-     * Use to determin if the validation context has any rule violations.
+     * Use to determine if the validation context has any rule violations.
      */
 	hasRuleViolations(): boolean {
 		var hasViolations = false;

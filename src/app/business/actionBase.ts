@@ -1,10 +1,10 @@
-import { Action } from './../BuildMotionJS/action/Index'
-import { ServiceContext } from './../BuildMotionJS/service/Index'
-import { ValidationContext } from './../BuildMotionJS/validation/Index'
+import { Action } from 'angular-rules-engine/action/Index'
+import { ServiceContext } from 'angular-rules-engine/service/Index'
+import { ValidationContext } from 'angular-rules-engine/validation/Index'
 import { BusinessProvider } from './Index';
-import { ServiceMessage } from './../BuildMotionJS/service/Index';
-import { MessageType } from './../BuildMotionJS/service/Index';
-import { ActionResult } from './../BuildMotionJS/action/Index';
+import { ServiceMessage } from 'angular-rules-engine/service/Index';
+import { MessageType } from 'angular-rules-engine/service/Index';
+import { ActionResult } from 'angular-rules-engine/action/Index';
 
 /**
  * Use this class as a base class for [Action] items. It allows you to abstract

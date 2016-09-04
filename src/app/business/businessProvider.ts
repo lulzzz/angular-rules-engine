@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { ServiceContext } from './../BuildMotionJS/service/index';
+import { ServiceContext } from 'angular-rules-engine/service/index';
 import { DoSomethingAction } from './Index';
 import { DoHttpService } from './../services/index';
 

@@ -1,6 +1,6 @@
 {
   "name": "angular-rules-engine",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications.",
   "main": "index.js",
   "scripts": {

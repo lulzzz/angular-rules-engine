@@ -1,6 +1,6 @@
 import { ActionBase } from './../Index';
-import { ActionResult } from './../../BuildMotionJS/action/Index';
-import rules = require('./../../BuildMotionJS/rules/rules');
+import { ActionResult } from 'angular-rules-engine/action/Index';
+import rules = require('angular-rules-engine/rules/rules');
 
 /**
  * This is a sample action that can be used to implement business logic. Limit the
@@ -37,7 +37,7 @@ export class DoSomethingAction extends ActionBase {
         this._validationContext
             .withSource(this.actionName)
             .addRule(new rules.AreEqual('ThingsAreEqual', 'The things are not equal.', 'this', 'that', false))
-            .addRule(new rules.IsTrue('ThisIsTrue', 'The [this] is not true', this.isDone, true))
+            .addRule(new rules.IsTrue('ThisIsTrue', 'This is not true', this.isDone, true))
             .addRule(new rules.IsTrue('Really?', 'Is it really true?', false))
             .addRule(new rules.StringIsNotNullEmptyRange('StringIsGood', 'The string is not valid.', 'Hi', 3, 10));
     }

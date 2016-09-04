@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { DoService } from './Index'
 import { BusinessProvider } from './business/index';
 import { DoHttpService } from './services/index';
-import { ServiceContext } from './BuildMotionJS/service/index';
-import { ServiceMessage } from './BuildMotionJS/service/index';
-import { MessageType } from './BuildMotionJS/service/index';
+import { ServiceContext } from 'angular-rules-engine/service/index';
+import { ServiceMessage } from 'angular-rules-engine/service/index';
+import { MessageType } from 'angular-rules-engine/service/index';
 
 @Component({
     moduleId: module.id,
