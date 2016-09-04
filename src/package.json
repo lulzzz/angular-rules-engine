@@ -1,0 +1,27 @@
+{
+  "name": "angular-rules-engine",
+  "version": "1.0.0",
+  "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buildmotion/angular-rules-engine.git"
+  },
+  "keywords": [
+    "angular",
+    "angular 2",
+    "ng2",
+    "rules engine",
+    "business rules",
+    "buildmotion"
+  ],
+  "author": "Matt Vaughn <matt.vaughn@buildmotion.com> (http://www.buildmotion.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/buildmotion/angular-rules-engine/issues"
+  },
+  "homepage": "https://github.com/buildmotion/angular-rules-engine#readme"
+}
