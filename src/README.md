@@ -6,6 +6,7 @@ The Angular Rules Engine is a JavaScript based rule engine that allows applicati
 + You can create a reusable library of rules and use them in one or more applications.
 + Take advantage of Typescript classes to quickly create `simple` or `composite` rules using the API that is part of the framework.
 + Use the `ValidationContext`to simply add, execute, and retrieve rule results.
++ Code faster using Fluent API style syntax - be more productive.
 + Using the `CompositeRule` base class, you can  create a rule that contains other rules of either `simple` or `composite` types. The rule execution algorithm manages the complexity - now you can create rules and reuse rules to match your business logic. 
 
 #Getting Started :: New Angular 2 Application
