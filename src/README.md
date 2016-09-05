@@ -3,6 +3,9 @@
 The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation.
 
 #Getting Started
+1. Create a new Angular 2 project using the Angular CLI
+2. Update the packages.json. Add a dependency to: angular-rules-engine
+3. Run npm install. This will retrive the package and add it to the node_modules folder. Any dependencies used by the package will also be downloaded and installed. 
 
 1. Initialize a new ValidationContext.
 2. Add rules to the context.
