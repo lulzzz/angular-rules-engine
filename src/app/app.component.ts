@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
 @Component({
     moduleId: module.id,
     selector: 'app-root',
-    templateUrl: 'app.component.html',
+    template: `{{title}}`,
     // providers: [ServiceContext, DoService, BusinessProvider, DoHttpService],
     styleUrls: ['app.component.css']
 })

@@ -9,7 +9,7 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
-    "outDir": "../dist/",
+    "outDir": "../dist",
     "rootDir": ".",
     "sourceMap": true,
     "target": "es5",
@@ -18,6 +18,14 @@
 
   "files": [
     "main.ts",
-    "typings.d.ts"
-  ]
+    "typings.d.ts",
+    "README.md",
+    "license",
+    "temp-package/package.json"
+  ],
+  "exclude": [
+    "favicon.ico",
+    "index.html",
+    "index.js"
+  ] 
 }
