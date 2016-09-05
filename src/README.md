@@ -8,18 +8,19 @@ The Angular Rules Engine is a JavaScript based rule engine that allows applicati
 + Use the `ValidationContext`to simply add, execute, and retrieve rule results.
 + Using the `CompositeRule` base class, you can  create a rule that contains other rules of either `simple` or `composite` types. The rule execution algorithm manages the complexity - now you can create rules and reuse rules to match your business logic. 
 
-#Getting Started
+#Getting Started :: New Angular 2 Application
 1. Create a new Angular 2 project using the Angular CLI
 2. Update the packages.json. Add a dependency to: angular-rules-engine
 3. Run npm install. This will retrive the package and add it to the node_modules folder. Any dependencies used by the package will also be downloaded and installed. 
 
-1. Initialize a new ValidationContext.
+##Getting Started :: Using the Angular-Rulels-Engine 
+1. Initialize a new `ValidationContext`.
 2. Add rules to the context.
 3. Execute the rules.
 4. Evaluate the rule results.
 
 #Motivation
-Two cores principles of goodd software design is [Separation of Concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns) and [Single Responsibility Principle(https://en.wikipedia.org/wiki/Single_responsibility_principle). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
+Two cores principles of goodd software design is [Separation of Concerns (SoC)](https://en.wikipedia.org/wiki/Separation_of_concerns) and [Single Responsibility Principle}(https://en.wikipedia.org/wiki/Single_responsibility_principle). Business rules and validation are an integral part of most business applications. There are rules and validations that must occur during processing of business logic. Most applications will combine the business logic with rules and data validation - when this happens, testing and maintaining applications becomes more difficult.
 
 A business rule engine allows the application to have a good Separation of Concerns (SOR). The Angular Rule Engine allows you to:
 
