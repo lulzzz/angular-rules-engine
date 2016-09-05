@@ -1,6 +1,6 @@
 {
   "name": "angular-rules-engine",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
@@ -41,6 +41,6 @@
     "tslint": "3.11.0",
     "typescript": "1.8.10",
     "typings": "1.3.1",
-    "typescript-dotnet-commonjs": "3.2.4"    
+    "typescript-dotnet-commonjs": "3.2.4"
   }
 }
