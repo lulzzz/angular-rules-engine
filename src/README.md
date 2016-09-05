@@ -14,7 +14,7 @@ The Angular Rules Engine is a JavaScript based rule engine that allows applicati
    - Range
    - StringIsNotNullEmptyRange
 + You can create a reusable library of rules and use them in one or more applications.
-+ Combine default and one ore more custom rules to create a `CompositeRule` - a rule that contains other rules (rule set).
++ Combine default and one or more custom rules to create a `CompositeRule` - a rule that contains other rules (rule set).
 + Each rule has a `Priority` property to execute rule sets in a specified sequence. 
 + Take advantage of Typescript classes to quickly create `simple` or `composite` (nested) rules using the API that is part of the framework.
 + Use the `ValidationContext`to simply add, execute, and retrieve rule results.
@@ -47,7 +47,7 @@ A business rule engine allows the application to have a good Separation of Conce
 + Create custom rules that are either simple or composite.
 + Create rules that can be reused throughout the application. Code reuse eliminates copy/paste of common rules.
 + Use a single ValidationContext to add rules, execute rules, and evaluate the rule results. 
-+ Use a consistent pattern and mechanism to implement your business rules and data validation.+ 
++ Use a consistent pattern and mechanism to implement your business rules and data validation.
 
 ##ValidationContext
 The ValidationContext is the container object for rules. It allows the developer to add, execute and retrieve the results of the evaluated rules. 
