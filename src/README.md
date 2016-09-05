@@ -4,8 +4,8 @@ The Angular Rules Engine is a JavaScript based rule engine that allows applicati
 
 + You can use the existing library of rules already implemented. 
 + You can create a reusable library of rules and use them in one or more applications.
-- AreEqual
-- AreNotEqual
+   - AreEqual
+   - AreNotEqual
 ..* IsFalse
 ..* IsTrue
 ..* IsNullOrUndefined
