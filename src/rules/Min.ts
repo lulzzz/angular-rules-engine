@@ -3,8 +3,8 @@ import CompareResult = dCompareResult.CompareResult;
 import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
 
-import {SimpleRule} from './Index'
-import {RuleResult} from './Index'
+import {SimpleRule} from './Index';
+import {RuleResult} from './Index';
 import {Primitive} from './Index';
 
 export class Min extends SimpleRule {

@@ -3,8 +3,8 @@ import CompareResult = dCompareResult.CompareResult;
 import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
 
-import {CompositeRule} from './Index'
-import {RuleResult} from './Index'
+import {CompositeRule} from './Index';
+import {RuleResult} from './Index';
 import {Primitive} from './Index';
 import {IsNotNullOrUndefined} from './Index';
 import {Range} from './Index';

@@ -70,7 +70,7 @@ export class Action implements IAction {
 
     evaluateRules(){
         console.log('Evaluating action rules.');
-        var context = this.validateAction();
+        let context = this.validateAction();
         if (context.isValid) {
             this.allowExecution = true;
             this.validationContext.state = ValidationContextState.Success;

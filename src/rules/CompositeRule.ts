@@ -1,5 +1,5 @@
-import {RulePolicy} from './RulePolicy'
-import {RuleResult} from './RuleResult'
+import {RulePolicy} from './RulePolicy';
+import {RuleResult} from './RuleResult';
 
 export class CompositeRule extends RulePolicy {
     hasErrors: boolean = false;

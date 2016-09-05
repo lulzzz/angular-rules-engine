@@ -1,4 +1,4 @@
-import {RulePolicy} from './RulePolicy'
+import {RulePolicy} from './RulePolicy';
 
 /**
  * Use this class as a base [extends] class for simple rules. A simple contains
