@@ -3,17 +3,17 @@
 The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation. Why use this rule engine?
 
 + You can use the existing library of rules already implemented. 
-+ You can create a reusable library of rules and use them in one or more applications.
    - AreEqual
    - AreNotEqual
-..* IsFalse
-..* IsTrue
-..* IsNullOrUndefined
-..* IsNotNullOrUndefined
-..* Max
-..* Min
-..* Range
-..* StringIsNotNullEmptyRange
+   - IsFalse
+   - IsTrue
+   - IsNullOrUndefined
+   - IsNotNullOrUndefined
+   - Max
+   - Min
+   - Range
+   - StringIsNotNullEmptyRange
++ You can create a reusable library of rules and use them in one or more applications.
 + Each rule has a `Priority` property to execute rule sets in a specified sequence. 
 + Take advantage of Typescript classes to quickly create `simple` or `composite` (nested) rules using the API that is part of the framework.
 + Use the `ValidationContext`to simply add, execute, and retrieve rule results.
