@@ -23,7 +23,7 @@ var Min = (function (_super) {
     Min.prototype.render = function () {
         var compareResult = Compare.compare(this.target, this.comparison, true);
         if (compareResult === -1 /* Less */) {
-            this.isValid = true;
+            this.isValid = false; //must be equal to or greater than the comparison value;
         }
         return new Index_2.RuleResult(this, this.target);
     };

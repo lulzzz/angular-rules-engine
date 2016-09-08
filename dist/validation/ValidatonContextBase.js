@@ -41,8 +41,11 @@ var ValidatonContextBase = (function () {
      */
     ValidatonContextBase.prototype.hasRuleViolations = function () {
         var hasViolations = false;
-        if (this.rules && this.rules.filter(function (r) { return r.isValid === false; })) {
-            hasViolations = true;
+        if (this.rules) {
+            var ruleViolationsCount = this.rules && this.rules.filter(function (r) { return r.isValid === false; }).length;
+            if (ruleViolationsCount > 0) {
+                hasViolations = true;
+            }
         }
         return hasViolations;
     };

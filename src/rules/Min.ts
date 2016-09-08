@@ -25,7 +25,7 @@ export class Min extends SimpleRule {
     render() {
         let compareResult = Compare.compare(this.target, this.comparison, true);
         if(compareResult === CompareResult.Less){
-            this.isValid = true;
+            this.isValid = false;//must be equal to or greater than the comparison value;
         }
         return new RuleResult(this, this.target);
     }

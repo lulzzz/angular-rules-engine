@@ -45,9 +45,12 @@ export class ValidatonContextBase implements IValidationContext {
      * Use to determine if the validation context has any rule violations.
      */
 	hasRuleViolations(): boolean {
-		var hasViolations = false;
-		if (this.rules && this.rules.filter(r => r.isValid === false)) {
-			hasViolations = true;
+		let hasViolations = false;
+		if(this.rules){
+			let ruleViolationsCount = this.rules && this.rules.filter(r => r.isValid === false).length;
+			if (ruleViolationsCount > 0) {
+				hasViolations = true;
+			}
 		}
 		return hasViolations;
 	}
