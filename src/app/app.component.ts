@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
-// import { DoService } from './Index';
-// import { BusinessProvider } from './business/index';
-// import { DoHttpService } from './services/index';
-// import { ServiceContext } from 'angular-rules-engine/service/index';
-// import { ServiceMessage } from 'angular-rules-engine/service/index';
-// import { MessageType } from 'angular-rules-engine/service/index';
+import dCompare = require('typescript-dotnet-commonjs/System/Compare');
+import Compare = dCompare;
+import dCompareResult = require('typescript-dotnet-commonjs/System/CompareResult');
+import CompareResult = dCompareResult.CompareResult;
 
 @Component({
     moduleId: module.id,
@@ -16,26 +14,27 @@ import { Component } from '@angular/core';
 export class AppComponent {
     title = 'app works!';
     result: boolean;
+    compareResult: CompareResult;
+    isTrue: boolean;
 
-    // constructor(
-    //     private businessProvider: BusinessProvider,
-    //     private doService: DoService) {
+    constructor(){
+        let a = 1;
+        let b = 1;
+        this.compareResult = Compare.compare(a, b, true);
+        console.log('CompareResult: ' + this.compareResult); // expect 0 (Equal)
+        this.isTrue = Compare.compare(a, b) === CompareResult.Equal
+        console.log('IsTrue: ' + this.isTrue);
 
-    //     this.result = this.doService.doSomething('Doing something from the app component...wow!!');
-    //     if (this.doService.serviceContext.isGood()) {
-    //         console.log(`Result: ${this.result} from the doService.`);
-    //     } else {
-    //         // programmatically add a new service message;
-    //         this.doService.serviceContext.addMessage(
-    //             new ServiceMessage('PoopyPants', 'Service errors exist.')
-    //                 .WithDisplayToUser(true)
-    //                 .WithMessageType(MessageType.Error)
-    //                 .WithSource('app.component')
-    //         );
-
-    //         // show the error messages
-    //         this.doService.serviceContext.ErrorMessages.filter(f => f.DisplayToUser)
-    //             .forEach(e => console.log(e.toString()));
-    //     }
-    // }
+        let small = 1;
+        let large = 10;
+        this.compareResult = Compare.compare(small, large, true);
+        console.log('CompareResult: ' + this.compareResult); //expect -1 (Less)
+        this.isTrue = Compare.compare(small, large) === CompareResult.Less
+        console.log('IsTrue: ' + this.isTrue);
+        
+        this.compareResult = Compare.compare(large, small, true);
+        console.log('CompareResult: ' + this.compareResult); //expect 1 (Greater)
+        this.isTrue = Compare.compare(large, small, true) === CompareResult.Greater;
+        console.log('IsTrue: ' + this.isTrue);
+    }
 }

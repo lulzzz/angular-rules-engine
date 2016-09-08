@@ -7,6 +7,10 @@ import {SimpleRule} from './Index';
 import {RuleResult} from './Index';
 import {Primitive} from './Index';
 
+/**
+ * Use the [Min] rule to determine if the target value is equal to or greater than the minimum
+ * allowed value [comparison].
+ */
 export class Min extends SimpleRule {
     target: Primitive;
     comparison: Primitive;
@@ -19,8 +23,9 @@ export class Min extends SimpleRule {
     }
 
     render() {
-        if (Compare.compare(this.target, this.comparison, true) === CompareResult.Greater) {
-            this.isValid = false;
+        let compareResult = Compare.compare(this.target, this.comparison, true);
+        if(compareResult === CompareResult.Less){
+            this.isValid = true;
         }
         return new RuleResult(this, this.target);
     }

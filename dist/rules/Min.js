@@ -8,6 +8,10 @@ var dCompare = require('typescript-dotnet-commonjs/System/Compare');
 var Compare = dCompare;
 var Index_1 = require('./Index');
 var Index_2 = require('./Index');
+/**
+ * Use the [Min] rule to determine if the target value is equal to or greater than the minimum
+ * allowed value [comparison].
+ */
 var Min = (function (_super) {
     __extends(Min, _super);
     function Min(name, message, target, comparison, isDisplayable) {
@@ -17,8 +21,9 @@ var Min = (function (_super) {
         this.comparison = comparison;
     }
     Min.prototype.render = function () {
-        if (Compare.compare(this.target, this.comparison, true) === 1 /* Greater */) {
-            this.isValid = false;
+        var compareResult = Compare.compare(this.target, this.comparison, true);
+        if (compareResult === -1 /* Less */) {
+            this.isValid = true;
         }
         return new Index_2.RuleResult(this, this.target);
     };

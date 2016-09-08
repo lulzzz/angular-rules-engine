@@ -9,11 +9,12 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
-    "outDir": "../dist",
+    "outDir": "../src",
     "rootDir": ".",
     "sourceMap": true,
     "target": "es5",
-    "inlineSources": true
+    "inlineSources": true,
+    "listEmittedFiles": true
   },
 
   "files": [
@@ -21,7 +22,8 @@
     "typings.d.ts",
     "README.md",
     "license",
-    "temp-package/package.json"
+    "temp-package/package.json",
+    "*.ts"
   ],
   "exclude": [
     "favicon.ico",

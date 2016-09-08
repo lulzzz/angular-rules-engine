@@ -1,3 +1,18 @@
+# Build
+This application has dependencies on [Angular ClI](https://cli.angular.io/) and [npm](https://nodejs.org/en/).
+
+### 1. Build project
+```txt
+    ng build
+```
+
+### 2. Include the Typescript files (.ts)
+This script moves Typescript files (.ts) to the destination folder of the application.
+```txt
+    xcopy-ts-dist.bat
+```
+
+
 # AngularRulesEngine
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.10.

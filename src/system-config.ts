@@ -9,10 +9,15 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'typescript-dotnet-commonjs': 'vendor/typescript-dotnet-commonjs'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'typescript-dotnet-commonjs/System': {
+    format: 'cjs',
+    defaultExtension: 'js'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
