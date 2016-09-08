@@ -13,11 +13,11 @@ var IsNotNullOrUndefined = (function (_super) {
         _super.call(this, name, message, isDisplayable);
         this.target = target;
     }
+    /**
+     * If the target is null or undefined, the result will be false.
+     */
     IsNotNullOrUndefined.prototype.render = function () {
         if (this.target == null || this.target === null || typeof this.target === "undefined") {
-            this.isValid = true;
-        }
-        else {
             this.isValid = false;
         }
         return new Index_2.RuleResult(this, this.target);

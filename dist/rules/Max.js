@@ -8,6 +8,10 @@ var dCompare = require('typescript-dotnet-commonjs/System/Compare');
 var Compare = dCompare;
 var Index_1 = require('./Index');
 var Index_2 = require('./Index');
+/**
+ * Use the [Max] rule to determine if the target value is equal to or less than
+ * the comparison value.
+ */
 var Max = (function (_super) {
     __extends(Max, _super);
     function Max(name, message, target, comparison, isDisplayable) {
@@ -17,7 +21,8 @@ var Max = (function (_super) {
         this.comparison = comparison;
     }
     Max.prototype.render = function () {
-        if (Compare.compare(this.target, this.comparison, true) === 1 /* Greater */) {
+        var compareResult = Compare.compare(this.target, this.comparison, true);
+        if (compareResult === 1 /* Greater */) {
             this.isValid = false;
         }
         return new Index_2.RuleResult(this, this.target);

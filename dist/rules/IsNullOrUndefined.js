@@ -14,8 +14,10 @@ var IsNullOrUndefined = (function (_super) {
         this.target = target;
     }
     IsNullOrUndefined.prototype.render = function () {
-        this.isValid = true;
-        if (this.target !== null || typeof this.target === undefined || typeof this.target === "undefined") {
+        if (this.target == null || typeof this.target === undefined || typeof this.target === "undefined") {
+            this.isValid = true;
+        }
+        else {
             this.isValid = false;
         }
         return new Index_2.RuleResult(this, this.target);

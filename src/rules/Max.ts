@@ -7,6 +7,10 @@ import {SimpleRule} from './Index';
 import {RuleResult} from './Index';
 import {Primitive} from './Index';
 
+/**
+ * Use the [Max] rule to determine if the target value is equal to or less than
+ * the comparison value.
+ */
 export class Max extends SimpleRule {
     target: Primitive;
     comparison: Primitive;
@@ -18,7 +22,8 @@ export class Max extends SimpleRule {
     }
 
     render() {
-        if (Compare.compare(this.target, this.comparison, true) === CompareResult.Greater) {
+        let compareResult = Compare.compare(this.target, this.comparison, true); 
+        if (compareResult === CompareResult.Greater) {
             this.isValid = false;
         }
         return new RuleResult(this, this.target);
