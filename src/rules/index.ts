@@ -15,3 +15,4 @@ export * from './Range';
 export * from './AreEqual';
 export * from './AreNotEqual';
 export * from './StringIsNotNullEmptyRange';
+export * from './Severity';

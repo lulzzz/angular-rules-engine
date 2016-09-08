@@ -9,8 +9,10 @@ export class IsNotNullOrUndefined extends SimpleRule {
     }
 
     render() {
-        this.isValid = true;
         if (this.target == null || this.target === null || typeof this.target === "undefined") {
+            this.isValid = true;
+        }
+        else{
             this.isValid = false;
         }
         return new RuleResult(this, this.target);

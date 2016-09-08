@@ -10,11 +10,13 @@ var Index_3 = require('./Index');
 var Index_4 = require('./Index');
 var Range = (function (_super) {
     __extends(Range, _super);
-    function Range(name, message, target, start, end) {
+    function Range(name, message, target, start, end, isDisplayable) {
+        if (isDisplayable === void 0) { isDisplayable = false; }
         _super.call(this, name, message);
         this.target = target;
         this.start = start;
         this.end = end;
+        this.isDisplayable = isDisplayable;
         this.rules.push(new Index_2.IsNotNullOrUndefined('TargetIsNotNull', 'The target is null or undefined.', this.target));
         if (this.target != null) {
             this.rules.push(new Index_3.Min('MinValue', 'The value must be equal to or greater than the start range value.', this.target, this.start));

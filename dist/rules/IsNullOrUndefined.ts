@@ -11,7 +11,7 @@ export class IsNullOrUndefined extends SimpleRule {
 
     render() {
         this.isValid = true;
-        if (this.target !== null || typeof this.target === "undefined") {
+        if (this.target !== null || typeof this.target === undefined || typeof this.target === "undefined") {
             this.isValid = false;
         }
         return new RuleResult(this, this.target);

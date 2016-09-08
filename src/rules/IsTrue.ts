@@ -10,8 +10,8 @@ export class IsTrue extends SimpleRule {
     }
 
     render() {
-        this.isValid = false;
-        if (!this.target) {//if(not true)-->false;
+        this.isValid = true;
+        if (this.target === false) {//if(not true)-->false;
             this.isValid = false;
         }
         return new RuleResult(this, this.target);

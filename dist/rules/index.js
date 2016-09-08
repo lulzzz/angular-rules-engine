@@ -17,4 +17,5 @@ __export(require('./Range'));
 __export(require('./AreEqual'));
 __export(require('./AreNotEqual'));
 __export(require('./StringIsNotNullEmptyRange'));
+__export(require('./Severity'));
 //# sourceMappingURL=index.js.map

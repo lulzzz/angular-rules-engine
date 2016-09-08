@@ -14,8 +14,8 @@ var IsTrue = (function (_super) {
         this.target = target;
     }
     IsTrue.prototype.render = function () {
-        this.isValid = false;
-        if (!this.target) {
+        this.isValid = true;
+        if (this.target === false) {
             this.isValid = false;
         }
         return new Index_2.RuleResult(this, this.target);

@@ -15,11 +15,12 @@ export class Range extends CompositeRule {
     start: number;
     target: Primitive;
 
-    constructor(name: string, message: string, target: Primitive, start: number, end: number) {
+    constructor(name: string, message: string, target: Primitive, start: number, end: number, isDisplayable: boolean = false) {
         super(name, message);
         this.target = target;
         this.start = start;
         this.end = end;
+        this.isDisplayable = isDisplayable;
 
         this.rules.push(new IsNotNullOrUndefined('TargetIsNotNull', 'The target is null or undefined.', this.target));
 
