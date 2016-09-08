@@ -6,15 +6,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
-// import { DoService } from './Index';
-// import { BusinessProvider } from './business/index';
-// import { DoHttpService } from './services/index';
-// import { ServiceContext } from 'angular-rules-engine/service/index';
-// import { ServiceMessage } from 'angular-rules-engine/service/index';
-// import { MessageType } from 'angular-rules-engine/service/index';
+var dCompare = require('typescript-dotnet-commonjs/System/Compare');
+var Compare = dCompare;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'app works!';
+        var a = 1;
+        var b = 1;
+        this.compareResult = Compare.compare(a, b, true);
+        console.log('CompareResult: ' + this.compareResult); // expect 0 (Equal)
+        this.isTrue = Compare.compare(a, b) === 0 /* Equal */;
+        console.log('IsTrue: ' + this.isTrue);
+        var small = 1;
+        var large = 10;
+        this.compareResult = Compare.compare(small, large, true);
+        console.log('CompareResult: ' + this.compareResult); //expect -1 (Less)
+        this.isTrue = Compare.compare(small, large) === -1 /* Less */;
+        console.log('IsTrue: ' + this.isTrue);
+        this.compareResult = Compare.compare(large, small, true);
+        console.log('CompareResult: ' + this.compareResult); //expect 1 (Greater)
+        this.isTrue = Compare.compare(large, small, true) === 1 /* Greater */;
+        console.log('IsTrue: ' + this.isTrue);
     }
     AppComponent = __decorate([
         core_1.Component({
