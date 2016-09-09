@@ -1,7 +1,11 @@
 
 # Angular Rules Engine
-The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation. Why use this rule engine?
+The Angular Rules Engine is a JavaScript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation. 
 
+## There is a reference application on Github.com: [angular-rules-engine-EXAMPLE](https://github.com/buildmotion/angular-rules-engine-EXAMPLE)
+The reference applcation demonstrates how to setup and use the rule engine. Check out the implementation of the 
+
+## Why use this rule engine?
 + You can use the existing library of rules already implemented. 
    - AreEqual
    - AreNotEqual
