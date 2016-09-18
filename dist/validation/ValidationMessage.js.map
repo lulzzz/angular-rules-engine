@@ -1,0 +1,1 @@
+{"version":3,"file":"ValidationMessage.js","sourceRoot":"","sources":["file:///B:/development/angular-rules-engine/src/validation/ValidationMessage.ts"],"names":[],"mappings":";AAEA;IAEI;IAAc,CAAC;IACnB,wBAAC;AAAD,CAAC,AAHD,IAGC;AAHY,yBAAiB,oBAG7B,CAAA","sourcesContent":["\n\nexport class ValidationMessage{\n\n    constructor(){}    \n}"]}

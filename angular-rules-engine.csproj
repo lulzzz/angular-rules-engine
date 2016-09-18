@@ -26,7 +26,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="package.json" />
-    <Content Include="src\license" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
   </ItemGroup>
@@ -66,6 +65,11 @@
     <TypeScriptCompile Include="src\validation\ValidationContextState.ts" />
     <TypeScriptCompile Include="src\validation\ValidationMessage.ts" />
     <TypeScriptCompile Include="src\validation\ValidatonContextBase.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="license" />
+    <Content Include="README.md" />
+    <Content Include="tslint.json" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>

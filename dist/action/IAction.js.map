@@ -1,0 +1,1 @@
+{"version":3,"file":"IAction.js","sourceRoot":"","sources":["file:///B:/development/angular-rules-engine/src/action/IAction.ts"],"names":[],"mappings":"","sourcesContent":["\nexport interface IAction {\n\texecute();\n}\n"]}
