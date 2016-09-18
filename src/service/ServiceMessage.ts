@@ -1,4 +1,4 @@
-import { MessageType } from './Index';
+import { MessageType } from './index';
 
 /**
  * Use this class to create a message for the current [ServiceContext].

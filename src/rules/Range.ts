@@ -3,12 +3,12 @@ import CompareResult = dCompareResult.CompareResult;
 import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
 
-import {CompositeRule} from './Index';
-import {RuleResult} from './Index';
-import {Primitive} from './Index';
-import {IsNotNullOrUndefined} from './Index';
-import {Min} from './Index';
-import {Max} from './Index';
+import {CompositeRule} from './index';
+import {RuleResult} from './index';
+import {Primitive} from './index';
+import {IsNotNullOrUndefined} from './index';
+import {Min} from './index';
+import {Max} from './index';
 
 export class Range extends CompositeRule {
     end: number;

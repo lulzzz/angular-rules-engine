@@ -3,9 +3,9 @@ import CompareResult = dCompareResult.CompareResult;
 import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
 
-import {SimpleRule} from './Index';
-import {RuleResult} from './Index';
-import {Primitive} from './Index';
+import {SimpleRule} from './index';
+import {RuleResult} from './index';
+import {Primitive} from './index';
 
 /**
  * Use the [Min] rule to determine if the target value is equal to or greater than the minimum

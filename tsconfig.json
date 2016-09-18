@@ -1,0 +1,40 @@
+{
+	"compileOnSave": false,
+	"compilerOptions": {
+		"declaration": true,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"inlineSources": true,
+		"mapRoot": "/",
+		"module": "commonjs",
+		"moduleResolution": "node",
+		"noEmitOnError": false,
+		"noImplicitAny": false,
+		"outDir": "dist",
+		"rootDir": "src",
+		"sourceMap": true,
+		"target": "es5"
+	},
+	"formatCodeOptions": {
+		"indentSize": 4,
+		"tabSize": 4,
+		"newLineCharacter": "\r\n",
+		"convertTabsToSpaces": true,
+		"insertSpaceAfterCommaDelimiter": true,
+		"insertSpaceAfterSemicolonInForStatements": true,
+		"insertSpaceBeforeAndAfterBinaryOperators": true,
+		"insertSpaceAfterKeywordsInControlFlowStatements": true,
+		"insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+		"insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+		"placeOpenBraceOnNewLineForFunctions": false,
+		"placeOpenBraceOnNewLineForControlBlocks": false
+	},
+	//"files": [
+	//	"./README",
+	//	"./license"
+	//],
+	"exclude": [
+		"node_modules",
+		"dist"
+	]
+}

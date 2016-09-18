@@ -1,5 +1,5 @@
-import { ServiceMessage } from './Index';
-import { MessageType } from './Index';
+import { ServiceMessage } from './index';
+import { MessageType } from './index';
 
 /**
  * Use this class to manage the context of a single service call. This 

@@ -1,4 +1,4 @@
-import {ValidatonContextBase} from './Index';
+import {ValidatonContextBase} from './index';
 
 /**
  * Use this class to create a new Validation Context for your application. With this

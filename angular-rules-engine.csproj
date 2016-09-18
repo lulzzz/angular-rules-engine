@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{DC270338-B14E-4D76-A711-511CEB2CE24C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\index.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+    <Content Include="src\license" />
+    <Content Include="tsconfig.json" />
+    <Content Include="typings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\action\Action.ts" />
+    <TypeScriptCompile Include="src\action\ActionResult.ts" />
+    <TypeScriptCompile Include="src\action\IAction.ts" />
+    <TypeScriptCompile Include="src\action\index.ts" />
+    <TypeScriptCompile Include="src\rules\AreEqual.ts" />
+    <TypeScriptCompile Include="src\rules\AreNotEqual.ts" />
+    <TypeScriptCompile Include="src\rules\CompositeRule.ts" />
+    <TypeScriptCompile Include="src\rules\GuidIsValid.ts" />
+    <TypeScriptCompile Include="src\rules\index.ts" />
+    <TypeScriptCompile Include="src\rules\IRuleComponent.ts" />
+    <TypeScriptCompile Include="src\rules\IsFalse.ts" />
+    <TypeScriptCompile Include="src\rules\IsNotNullOrUndefined.ts" />
+    <TypeScriptCompile Include="src\rules\IsNullOrUndefined.ts" />
+    <TypeScriptCompile Include="src\rules\IsTrue.ts" />
+    <TypeScriptCompile Include="src\rules\Max.ts" />
+    <TypeScriptCompile Include="src\rules\Min.ts" />
+    <TypeScriptCompile Include="src\rules\Primitive.ts" />
+    <TypeScriptCompile Include="src\rules\Range.ts" />
+    <TypeScriptCompile Include="src\rules\RenderType.ts" />
+    <TypeScriptCompile Include="src\rules\RulePolicy.ts" />
+    <TypeScriptCompile Include="src\rules\RuleResult.ts" />
+    <TypeScriptCompile Include="src\rules\rules.ts" />
+    <TypeScriptCompile Include="src\rules\Severity.ts" />
+    <TypeScriptCompile Include="src\rules\SimpleRule.ts" />
+    <TypeScriptCompile Include="src\rules\StringIsNotNullEmptyRange.ts" />
+    <TypeScriptCompile Include="src\service\index.ts" />
+    <TypeScriptCompile Include="src\service\MessageType.ts" />
+    <TypeScriptCompile Include="src\service\ServiceContext.ts" />
+    <TypeScriptCompile Include="src\service\ServiceMessage.ts" />
+    <TypeScriptCompile Include="src\validation\index.ts" />
+    <TypeScriptCompile Include="src\validation\IValidationContext.ts" />
+    <TypeScriptCompile Include="src\validation\ValidationContext.ts" />
+    <TypeScriptCompile Include="src\validation\ValidationContextState.ts" />
+    <TypeScriptCompile Include="src\validation\ValidationMessage.ts" />
+    <TypeScriptCompile Include="src\validation\ValidatonContextBase.ts" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>angular_rules_engine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>17934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17934/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)package.json" "$(ProjectDir)dist"
+xcopy "$(ProjectDir)README.md" "$(ProjectDir)dist"
+xcopy "$(ProjectDir)license" "$(ProjectDir)dist"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,5 +1,5 @@
-import {SimpleRule} from './Index';
-import {RuleResult} from './Index';
+import {SimpleRule} from './index';
+import {RuleResult} from './index';
 
 export class IsTrue extends SimpleRule {
     target: boolean;

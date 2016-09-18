@@ -1,1 +1,0 @@
-{"version":3,"file":"IAction.js","sourceRoot":"","sources":["file:///b:/BuildMotionJS/angular-rules-engine/tmp/broccoli_type_script_compiler-input_base_path-YX4Lv3hd.tmp/0/src/action/IAction.ts"],"names":[],"mappings":"","sourcesContent":["\r\nexport interface IAction {\r\n\texecute();\r\n}\r\n"]}
