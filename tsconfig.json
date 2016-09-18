@@ -29,10 +29,6 @@
 		"placeOpenBraceOnNewLineForFunctions": false,
 		"placeOpenBraceOnNewLineForControlBlocks": false
 	},
-	//"files": [
-	//	"./README",
-	//	"./license"
-	//],
 	"exclude": [
 		"node_modules",
 		"dist"
