@@ -107,6 +107,6 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)package.json" "$(ProjectDir)dist" /f /r /u</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)package.json" "$(ProjectDir)dist\" /f /r /u</PostBuildEvent>
   </PropertyGroup>
 </Project>

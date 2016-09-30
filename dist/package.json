@@ -1,7 +1,7 @@
 {
   "name": "angular-rules-engine",
-  "version": "0.0.13",
-  "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications.",
+  "version": "0.0.15",
+  "description": "A serious rule engine developed using Typescript. Perfect for Angular 2 and single page applications. Build something!",
   "license": "MIT",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "postinstall": "typings install",
     "lint": "tslint \"src/**/*.ts\""
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "es6-shim": "0.35.1",
     "reflect-metadata": "0.1.3",

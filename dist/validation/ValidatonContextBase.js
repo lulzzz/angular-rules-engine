@@ -1,10 +1,14 @@
 "use strict";
 var index_1 = require('./index');
 var ValidatonContextBase = (function () {
+    /**
+     * The constructor for the base validation context.
+     */
     function ValidatonContextBase() {
         this.state = index_1.ValidationContextState.NotEvaluated;
         this.results = new Array();
         this.rules = new Array();
+        console.log('The [ValidationContext] is ready for action(s). All things are good until broken...');
     }
     /**
      * Use this method to add a new rule to the ValidationContext.

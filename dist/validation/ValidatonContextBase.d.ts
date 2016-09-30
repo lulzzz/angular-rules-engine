@@ -8,6 +8,10 @@ export declare class ValidatonContextBase implements IValidationContext {
     rules: Array<RulePolicy>;
     source: string;
     /**
+     * The constructor for the base validation context.
+     */
+    constructor();
+    /**
      * Use this method to add a new rule to the ValidationContext.
      */
     addRule(rule: RulePolicy): this;
