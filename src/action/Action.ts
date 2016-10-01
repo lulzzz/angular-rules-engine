@@ -1,5 +1,4 @@
 ﻿import {ValidationContext} from '../validation/index';
-import {ValidatonContextBase} from '../validation/index';
 import {ValidationContextState} from '../validation/index';
 import {IAction} from './IAction';
 import { ActionResult } from './index';
@@ -17,7 +16,7 @@ import { ActionResult } from './index';
  *		6. preExecuteAction();
  *
  *If the status of action is good, the business logic will be executed using the:
- *		1. processAction();
+ *		1. processAction(); 
  * 
  * The post-execution functions that can be implemented are:
  *		1. postExecuteAction();
@@ -26,12 +25,12 @@ import { ActionResult } from './index';
  */ 
 export class Action implements IAction {
     allowExecution = true;
-    _validationContext: ValidatonContextBase = new ValidationContext();
+    _validationContext: ValidationContext = new ValidationContext();
     actionResult: ActionResult = ActionResult.Unknown;
 
     constructor() {}
 
-    get validationContext(): ValidatonContextBase {
+    get validationContext(): ValidationContext {
         return this._validationContext;
     }
 

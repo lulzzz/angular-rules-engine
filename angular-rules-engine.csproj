@@ -25,7 +25,8 @@
     <Content Include="src\index.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="package.json" />
+    <Content Include="dist\package.json" />
+    <None Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
   </ItemGroup>
@@ -61,10 +62,9 @@
     <TypeScriptCompile Include="src\service\ServiceMessage.ts" />
     <TypeScriptCompile Include="src\validation\index.ts" />
     <TypeScriptCompile Include="src\validation\IValidationContext.ts" />
-    <TypeScriptCompile Include="src\validation\ValidationContext.ts" />
     <TypeScriptCompile Include="src\validation\ValidationContextState.ts" />
     <TypeScriptCompile Include="src\validation\ValidationMessage.ts" />
-    <TypeScriptCompile Include="src\validation\ValidatonContextBase.ts" />
+    <TypeScriptCompile Include="src\validation\ValidationContext.ts" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="license" />
@@ -107,6 +107,6 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)package.json" "$(ProjectDir)dist\" /f /r /u</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(ProjectDir)package.json" "$(ProjectDir)dist\" /f /r /u /D /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>

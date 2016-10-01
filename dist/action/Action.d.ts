@@ -1,4 +1,4 @@
-import { ValidatonContextBase } from '../validation/index';
+import { ValidationContext } from '../validation/index';
 import { IAction } from './IAction';
 import { ActionResult } from './index';
 /**
@@ -23,10 +23,10 @@ import { ActionResult } from './index';
  */
 export declare class Action implements IAction {
     allowExecution: boolean;
-    _validationContext: ValidatonContextBase;
+    _validationContext: ValidationContext;
     actionResult: ActionResult;
     constructor();
-    validationContext: ValidatonContextBase;
+    validationContext: ValidationContext;
     /**
      * Use this method to execute a concrete action. A concrete action must implement
      * the [processAction] and the [validateActionResult] functions to be a valid
@@ -90,5 +90,5 @@ export declare class Action implements IAction {
     /**
      * Implement this function to perform validation of business rules and data.
      */
-    validateAction(): ValidatonContextBase;
+    validateAction(): ValidationContext;
 }
