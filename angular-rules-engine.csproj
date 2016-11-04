@@ -25,7 +25,7 @@
     <Content Include="src\index.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dist\package.json" />
+    <None Include="dist\package.json" />
     <None Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />
