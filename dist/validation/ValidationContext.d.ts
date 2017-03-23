@@ -39,5 +39,5 @@ export declare class ValidationContext implements IValidationContext {
      * *Use to indicate if the validation context is valid - no rule violations.
      * @returns {}: returns a boolean.
      */
-    isValid: boolean;
+    readonly isValid: boolean;
 }

@@ -1,4 +1,4 @@
-import {RulePolicy} from './RulePolicy';
+﻿import {RulePolicy} from './RulePolicy';
 import {RuleResult} from './RuleResult';
 
 export class CompositeRule extends RulePolicy {
@@ -6,8 +6,8 @@ export class CompositeRule extends RulePolicy {
     results: Array<RuleResult> = new Array<RuleResult>();
     rules: Array<RulePolicy> = new Array<RulePolicy>();
 
-    constructor(name: string, message: string) {
-        super(name, message, false);
+    constructor(name: string, message: string, isDisplayable: boolean) {
+        super(name, message, isDisplayable);
     }
 
     render(): RuleResult {

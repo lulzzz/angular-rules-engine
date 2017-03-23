@@ -31,3 +31,8 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+bin/angular-rules-engine.dll
+bin/angular-rules-engine.pdb
+obj/*
+.vs/angular-rules-engine/v15/.suo
+.vs/config/applicationhost.config

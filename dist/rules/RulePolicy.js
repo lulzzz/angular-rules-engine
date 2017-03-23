@@ -1,6 +1,10 @@
 "use strict";
-var RenderType_1 = require('./RenderType');
-var Severity_1 = require('./Severity');
+var RenderType_1 = require("./RenderType");
+var Severity_1 = require("./Severity");
+/**
+ * This is the base class for all rules. All rules will extend from this class. New rules
+ * should extend [SimpleRule] or [CompositeRule] - these rule abstractions extend [RulePolicy].
+ */
 var RulePolicy = (function () {
     function RulePolicy(name, message, isDisplayable, severity, priority) {
         if (isDisplayable === void 0) { isDisplayable = false; }
@@ -23,7 +27,7 @@ var RulePolicy = (function () {
      * Each rule must implement this function and return a valid [RuleResult].
      */
     RulePolicy.prototype.render = function () {
-        throw new Error('Each concreate rule must implement this function and return a valid Result.');
+        throw new Error('Each concrete rule must implement this function and return a valid Result.');
     };
     return RulePolicy;
 }());

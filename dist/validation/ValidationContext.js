@@ -1,5 +1,5 @@
 "use strict";
-var index_1 = require('./index');
+var index_1 = require("./index");
 /**
  * Use this class to create a new Validation Context for your application. With this
  * context, you can add rules and evaluate the rules.

@@ -26,7 +26,7 @@ export declare class Action implements IAction {
     _validationContext: ValidationContext;
     actionResult: ActionResult;
     constructor();
-    validationContext: ValidationContext;
+    readonly validationContext: ValidationContext;
     /**
      * Use this method to execute a concrete action. A concrete action must implement
      * the [processAction] and the [validateActionResult] functions to be a valid

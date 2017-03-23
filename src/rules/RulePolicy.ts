@@ -1,8 +1,12 @@
-import {IRuleComponent} from './IRuleComponent';
+﻿import {IRuleComponent} from './IRuleComponent';
 import {RuleResult} from './RuleResult';
 import {RenderType} from './RenderType';
 import {Severity} from './Severity';
 
+/**
+ * This is the base class for all rules. All rules will extend from this class. New rules
+ * should extend [SimpleRule] or [CompositeRule] - these rule abstractions extend [RulePolicy].
+ */
 export class RulePolicy implements IRuleComponent {
     isValid: boolean = true;
     message: string;
@@ -32,6 +36,6 @@ export class RulePolicy implements IRuleComponent {
      * Each rule must implement this function and return a valid [RuleResult].
      */
     render(): RuleResult {
-        throw new Error('Each concreate rule must implement this function and return a valid Result.');
+        throw new Error('Each concrete rule must implement this function and return a valid Result.');
     }
 }

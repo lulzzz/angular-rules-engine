@@ -4,15 +4,16 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var RulePolicy_1 = require('./RulePolicy');
-var RuleResult_1 = require('./RuleResult');
+var RulePolicy_1 = require("./RulePolicy");
+var RuleResult_1 = require("./RuleResult");
 var CompositeRule = (function (_super) {
     __extends(CompositeRule, _super);
-    function CompositeRule(name, message) {
-        _super.call(this, name, message, false);
-        this.hasErrors = false;
-        this.results = new Array();
-        this.rules = new Array();
+    function CompositeRule(name, message, isDisplayable) {
+        var _this = _super.call(this, name, message, isDisplayable) || this;
+        _this.hasErrors = false;
+        _this.results = new Array();
+        _this.rules = new Array();
+        return _this;
     }
     CompositeRule.prototype.render = function () {
         var _this = this;

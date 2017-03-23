@@ -1,4 +1,4 @@
-import dCompareResult = require('typescript-dotnet-commonjs/System/CompareResult');
+﻿import dCompareResult = require('typescript-dotnet-commonjs/System/CompareResult');
 import CompareResult = dCompareResult.CompareResult;
 import dCompare = require('typescript-dotnet-commonjs/System/Compare');
 import Compare = dCompare;
@@ -27,7 +27,7 @@ export class StringIsNotNullEmptyRange extends CompositeRule {
      * @param maxLength: The maximum allowed length of the target value.
      */
     constructor(name: string, message: string, target: Primitive, minLength: number, maxLength: number, isDisplayable: boolean = false) {
-        super(name, message);
+        super(name, message, isDisplayable);
         this.target = target;
         this.minLength = minLength;
         this.maxLength = maxLength;

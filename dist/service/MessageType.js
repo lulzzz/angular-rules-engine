@@ -2,6 +2,7 @@
 /**
  * Use to indicate the type for the [ServiceMessage].
  */
+var MessageType;
 (function (MessageType) {
     /**
      * Use to indicate the message type is informational.
@@ -15,6 +16,5 @@
      * Use to indicate the message type is error.
      */
     MessageType[MessageType["Error"] = 3] = "Error";
-})(exports.MessageType || (exports.MessageType = {}));
-var MessageType = exports.MessageType;
+})(MessageType = exports.MessageType || (exports.MessageType = {}));
 //# sourceMappingURL=/service/MessageType.js.map

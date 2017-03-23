@@ -4,14 +4,15 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var index_1 = require('./index');
-var index_2 = require('./index');
+var index_1 = require("./index");
+var index_2 = require("./index");
 var IsTrue = (function (_super) {
     __extends(IsTrue, _super);
     function IsTrue(name, message, target, isDisplayable) {
         if (isDisplayable === void 0) { isDisplayable = true; }
-        _super.call(this, name, message, isDisplayable);
-        this.target = target;
+        var _this = _super.call(this, name, message, isDisplayable) || this;
+        _this.target = target;
+        return _this;
     }
     IsTrue.prototype.render = function () {
         this.isValid = true;

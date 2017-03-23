@@ -4,14 +4,15 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var index_1 = require('./index');
-var index_2 = require('./index');
+var index_1 = require("./index");
+var index_2 = require("./index");
 var IsNotNullOrUndefined = (function (_super) {
     __extends(IsNotNullOrUndefined, _super);
     function IsNotNullOrUndefined(name, message, target, isDisplayable) {
         if (isDisplayable === void 0) { isDisplayable = false; }
-        _super.call(this, name, message, isDisplayable);
-        this.target = target;
+        var _this = _super.call(this, name, message, isDisplayable) || this;
+        _this.target = target;
+        return _this;
     }
     /**
      * If the target is null or undefined, the result will be false.

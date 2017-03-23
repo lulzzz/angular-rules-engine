@@ -2,7 +2,7 @@
 function __export(m) {
     for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
 }
-__export(require('./ServiceContext'));
-__export(require('./ServiceMessage'));
-__export(require('./MessageType'));
-//# sourceMappingURL=/service/index.js.map
+__export(require("./ServiceContext"));
+__export(require("./ServiceMessage"));
+__export(require("./MessageType"));
+//# sourceMappingURL=/service/Index.js.map

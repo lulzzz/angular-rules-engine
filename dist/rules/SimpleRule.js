@@ -4,7 +4,7 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var RulePolicy_1 = require('./RulePolicy');
+var RulePolicy_1 = require("./RulePolicy");
 /**
  * Use this class as a base [extends] class for simple rules. A simple contains
  * a single rule and target to evaluate.
@@ -20,7 +20,7 @@ var SimpleRule = (function (_super) {
      * @param message: The message to display if the rule is violated.
      */
     function SimpleRule(name, message, isDisplayable) {
-        _super.call(this, name, message, isDisplayable);
+        return _super.call(this, name, message, isDisplayable) || this;
     }
     return SimpleRule;
 }(RulePolicy_1.RulePolicy));
