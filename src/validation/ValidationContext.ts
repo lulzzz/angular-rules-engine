@@ -1,4 +1,4 @@
-import {IValidationContext} from './index';
+﻿import {IValidationContext} from './index';
 import {ValidationContextState} from './index';
 import {RuleResult} from '../rules/index';
 import {RulePolicy} from '../rules/index';

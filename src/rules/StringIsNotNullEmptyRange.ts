@@ -37,11 +37,11 @@ export class StringIsNotNullEmptyRange extends CompositeRule {
 
     /**
      * A helper method to configure/add rules to the validation context. 
-     */
+     */ 
     configureRules() {
         this.rules.push(new IsNotNullOrUndefined('StringIsNotNull', 'The string target is null or undefined.', this.target));
         if (this.target != null) {
-            this.rules.push(new Range('TargetLengselfWithinRange', 'The string value is not within the specified range.', this.target.toString().length, this.minLength, this.maxLength));
+            this.rules.push(new Range('TargetLengthIsWithinRange', 'The string value is not within the specified range.', this.target.toString().length, this.minLength, this.maxLength));
         }
     }
 }

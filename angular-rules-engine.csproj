@@ -26,6 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="dist\package.json" />
+    <Content Include="dist\README.md" />
     <None Include="package.json" />
     <Content Include="tsconfig.json" />
     <Content Include="typings.json" />

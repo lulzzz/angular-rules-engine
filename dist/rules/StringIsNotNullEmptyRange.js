@@ -36,7 +36,7 @@ var StringIsNotNullEmptyRange = (function (_super) {
     StringIsNotNullEmptyRange.prototype.configureRules = function () {
         this.rules.push(new index_2.IsNotNullOrUndefined('StringIsNotNull', 'The string target is null or undefined.', this.target));
         if (this.target != null) {
-            this.rules.push(new index_3.Range('TargetLengselfWithinRange', 'The string value is not within the specified range.', this.target.toString().length, this.minLength, this.maxLength));
+            this.rules.push(new index_3.Range('TargetLengthIsWithinRange', 'The string value is not within the specified range.', this.target.toString().length, this.minLength, this.maxLength));
         }
     };
     return StringIsNotNullEmptyRange;
