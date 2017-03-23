@@ -1,4 +1,4 @@
-
+﻿
 # Angular Rules Engine
 The Angular Rules Engine is a Javascript/Typescript based rule engine that allows applications to contain simple or sophisticated business rule implementations as well as data validation. 
 
@@ -76,7 +76,7 @@ export class myClass {
 }
 ```
 
-The following shows the entire `ValidatonContext` class with its implementation detials. It is straightforward, you make the calls in the following sequence:
+The following shows the entire `ValidatonContext` class with its implementation details. It is straightforward, you make the calls in the following sequence:
 
 1. `addRule(..)`: Add rules that you want to evaluate.
 2. `renderRules()`: Renders all rules added to the ValidationContext.
@@ -145,8 +145,9 @@ export class ValidatonContext implements IValidationContext {
 Using an initialzied [ValidationContext] object, you can add rules using a Fluent API syntax. The following example uses existing rules. 
 
 A rule requires:
-+Name: the name of the rule.
-+Message: the text to display if the rule fails.
+
++ Name: the name of the rule.
++ Message: the text to display if the rule fails.
 
 ```js
   this.validationContext
@@ -171,7 +172,7 @@ After the rules are executed, you can examine the rule results. Each rendered ru
 based on the rule, criteria, and target value(s). 
 
 Many times it is useful to filter or extract the failed rules from the `ValidationContext`. The following code snippet shows how 
-you would extract failed rules that are marked as displayable (i.e., `e.rulePolicy.isDisplayable) into a list of `ServiceMessage` items.
+you would extract failed rules that are marked as displayable (i.e., `e.rulePolicy.isDisplayable`) into a list of `ServiceMessage` items.
 
 ```js
 // Load the error/rule violations into the ServiceContext so that the information bubbles up to the caller of the service;
@@ -190,15 +191,15 @@ The [RulePolicy] is the base class for all rule types. The angular-rules-engine 
 
 These rule types form the basis of all rules in the rule engine. The rule engine uses the Composite Design Pattern - [click here for more information about this pattern](https://en.wikipedia.org/wiki/Composite_pattern). All rules have the following properties of information. 
 
-+ isValid: Use to indicate the status of the rule after evaluation.
-+ message: Use to provide a message for failed rules. 
-+ name: Use to create a name that identifies the specified rule.
-+ priority: Use to assign a numeric value to the rule. Rules are sorted by priority and executed in the same sort sequence. 
-+ result: The output of an executed rule. It contains the result and `RulePolicy` information.
-+ isDisplayable: Use to indicate if the rule result is displayable to the caller. Default value is `false`. You must explicitly provide a [true] value for this when initializing a new rule. 
-+ renderType: Currently the only option is `RenderType.EvaluateAllRules`. 
-+ severity: Use to indicate the severity (Exception, Warning, or Information) if the rule evaluation is not valid.
-+ source: Use to indicate the source or location of the rule.
++ **isValid**: Use to indicate the status of the rule after evaluation.
++ **message**: Use to provide a message for failed rules. 
++ **name**: Use to create a name that identifies the specified rule.
++ **priority**: Use to assign a numeric value to the rule. Rules are sorted by priority and executed in the same sort sequence. 
++ **result**: The output of an executed rule. It contains the result and `RulePolicy` information.
++ **isDisplayable**: Use to indicate if the rule result is displayable to the caller. Default value is `false`. You must explicitly provide a [true] value for this when initializing a new rule. 
++ **renderType**: Currently the only option is `RenderType.EvaluateAllRules`. 
++ **severity**: Use to indicate the severity (Exception, Warning, or Information) if the rule evaluation is not valid.
++ **source**: Use to indicate the source or location of the rule.
 
 The following `RulePolicy` class is base class for all rule types. Each of the default rules contained in this npm package extends either the SimpleRule or the CompositeRule - and each of these classes extend from the `RulePolicy` class. The allows all rules to have common behavior and execution strategies.
 
@@ -273,7 +274,7 @@ export class RuleResult {
 ```
 
 ## Simple Rules
-The main difference between `SimpleRule` and a `CompositeRule` is how they are rendered during their execution. A simple rule h
+The main difference between `SimpleRule` and a `CompositeRule` is how they are rendered during their execution. A simple rule has a single evaluation with a single result.
 
 ```js
 import {RulePolicy} from './RulePolicy';
@@ -321,7 +322,7 @@ export class IsTrue extends SimpleRule {
 ```
 
 ## Composite Rules
-A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerfule pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
+A composite rule is a rule that contains a list of rules to be evaluated. A rule in this list can be a rule that extends from either `SimpleRule ` or `CompositeRule`. This allows for a more complex implementation of rules - it is a very powerfule pattern. You can have a rule that contains a list of rules, where one of those rules may be a `CompositeRule`, where one of those rules in the composite rule is a composite side-by-side with other simple and complex rules. 
 
 You are creating a rule-tree where all rules will have to evalute to valid for the container rule to be valid. This pattern allows a developer to create new custom rules and then use those rules with the default rules to orchestrate a rule implementation against a target object or value. 
 
@@ -474,36 +475,4 @@ export class Range extends CompositeRule {
 ## Conclusion
 There are lots of details in the implementation of a rule engine. However, remember that you only need to initialize a `ValidationContext`, add rules, and then call the `renderRules()` to evaluate the rule set and provide a list of `RuleResult` items. It is that simple. Happy rule rendering.
 
-# Other Information
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.10.
-
-The project has a dependency on: "typescript-dotnet-commonjs": "3.2.4",
-
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/route/class`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/). 
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to Github Pages
-
-Run `ng github-pages:deploy` to deploy to Github Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
+&copy; 2016-2017, Build Motion, LLC [www.buildmotion.com](http://www.buildmotion.com)
